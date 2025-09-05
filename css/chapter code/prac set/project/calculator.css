@@ -1,0 +1,23 @@
+#Einstein-calculator {
+  border: 1px solid rgb(187, 183, 183);
+  border-radius: 10px;
+  width: 300px;
+}
+
+#display {
+  margin: 20px;
+  width: 80%;
+  font-size: 50px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  width: 50px;
+  height: 45px;
+  margin: 9px;
+}

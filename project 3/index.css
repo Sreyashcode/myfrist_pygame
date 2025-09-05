@@ -1,0 +1,414 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.main-header {
+    background-color: rgba(0, 195, 255, 0.98);
+    color: white;
+    padding: 20px 0;
+    bax-shadow: 0 2px 5px rgba(0,0,0,0.1)
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+.main-nav ul li a:hover {
+    color:rgb(65, 207, 250);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgb(51, 214, 255), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x500?text=Beautiful+Travel+Destination') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgb(62, 216, 255);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgb(7, 208, 223);
+}
+
+/* Tab Selector */
+.tab-selector {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab-button {
+    background-color: rgb(96, 223, 255);
+    color: white;
+    border: 1px solid rgb(48, 147, 172);
+    padding: 10px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.tab-button.active {
+    background-color: white;
+    color: #007bff;
+    border-color: white;
+}
+
+.tab-button:hover:not(.active) {
+    background-color: rgba(255,255,255,0.4);
+}
+
+/* Search Forms */
+.search-form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    color: #333;
+    display: none; /* Hidden by default, managed by JS */
+}
+
+.search-form-container.active-tab {
+    display: block;
+}
+
+.search-form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
+}
+.search-button {
+    grid-column: 1 / -1; /* Span across all columns */
+    background-color: #28a745; /* Green for search/action */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.search-button:hover {
+    background-color: #218838;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+/* Hotel Grid */
+.hotel-grid, .flight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.hotel-card, .flight-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover, .flight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.hotel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.hotel-card h3, .flight-card h3 {
+    padding: 15px 20px 0;
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.hotel-card p, .flight-card p {
+    padding: 0 20px;
+    color: #666;
+    font-size: 0.95em;
+}
+
+.hotel-card .rating {
+    padding: 0 20px;
+    color: #ffc107; /* Star color */
+    margin-bottom: 10px;
+}
+
+.hotel-card .price {
+    padding: 0 20px 15px;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.hotel-card .btn, .flight-card .btn {
+    display: block; /* Make button full width */
+    width: calc(100% - 40px); /* Adjust for padding */
+    margin: 0 20px 20px;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+/* Flight Card Specific */
+.flight-card {
+    padding-bottom: 20px; /* Adjust padding for button */
+}
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0 20px;
+    font-size: 0.9em;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .main-nav ul li {
+        margin: 5px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .search-form {
+        grid-template-columns: 1fr; /* Stack inputs on smaller screens */
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .hotel-grid, .flight-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .footer-column {
+        flex-basis: 48%; /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero-section {
+        padding: 60px 20px;
+    }
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .search-form-container {
+        padding: 20px;
+    }
+
+    .content-section {
+        padding: 40px 0;
+    }
+    .content-section h2 {
+        font-size: 2em;
+    }
+
+    .hotel-grid, .flight-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+
+    .footer-column {
+        flex-basis: 100%; /* Stack all footer columns */
+    }
+}

@@ -1,0 +1,257 @@
+h1 {
+      color: rgba(14, 226, 198, 0.99);
+    font-size: 36px;
+    text-align: center;
+    front-weight: bold;
+}
+body {
+    background-color:rgb(0, 0, 0)
+     
+    
+}
+
+
+.main-container {
+    padding: 20px;
+    background-color: #f4f7f6; /* Should match body or be slightly different */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.forgot-password: {
+    color: rgb(228, 224, 12)
+}
+.login-box {
+    width: 350px; /* Fixed width for the box */
+    padding: 30px;
+    /* RGB Background Color */
+    background-color: rgb(247, 247, 247); /* A very light green/mint */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgb(7, 43, 247); /* Slightly stronger shadow */
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.login-button {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+.forgot-password-button {
+background-color:rgb(243, 17, 17)
+color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.forgot-password {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+/* From style.css, starting at line 62: */
+
+/* Subscription Area Styling */
+.subscription-area {
+    background-color: rgba(240, 248, 255, 0.95); /* AliceBlue with slight transparency */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 700px; /* Max width for the subscription area */
+    text-align: center;
+    box-sizing: border-box;
+    /* Initial state: hidden */
+    display: none; /* This hides the element by default */
+    flex-grow: 1; /* Allow it to take available space if needed */
+}
+
+.subscription-area h2 {
+    color: rgb(255, 99, 71); /* Tomato color using RGB */
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between individual pricing cards */
+    margin-bottom: 30px;
+}
+
+.price-card {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    width: 100%;
+    max-width: 250px; /* Max width for each card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom */
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.price-card.recommended {
+    border-color: rgb(255, 140, 0); /* DarkOrange for recommended plan */
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.2);
+}
+
+.price-card h3 {
+    color: rgb(60, 179, 113); /* MediumSeaGreen */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.price-card.recommended h3 {
+    color: rgb(255, 140, 0); /* DarkOrange */
+}
+
+
+.price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(70, 130, 180); /* SteelBlue */
+    margin-bottom: 15px;
+}
+
+.price span {
+    font-size: 0.5em;
+    font-weight: normal;
+    color: #777;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.price-card ul li {
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.subscribe-button {
+    background-color: rgb(70, 130, 180); /* SteelBlue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: auto; /* Push button to bottom if card content varies */
+}
+
+.price-card.recommended .subscribe-button {
+    background-color: rgb(255, 140, 0); /* DarkOrange */
+}
+
+.subscribe-button:hover {
+    background-color: rgb(50, 90, 120); /* Darker SteelBlue */
+}
+
+.price-card.recommended .subscribe-button:hover {
+    background-color: rgb(200, 100, 0); /* Darker DarkOrange */
+}
+
+/* Helper Class for JavaScript */
+.hidden {
+    display: none !important; /* Force hide */
+}
+
+/* Toggle Links */
+.subscription-toggle a {
+    color: rgb(0, 102, 204); /* A shade of blue for links */
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.subscription-toggle a:hover {
+    color: rgb(0, 70, 140);
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-box, .subscription-area {
+        max-width: 90%; /* Adjust max-width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box, .subscription-area {
+        padding: 20px;
+    }
+
+    .login-box h2 {
+        font-size: 1.5em;
+    }
+
+    .subscription-area h2 {
+        font-size: 1.7em;
+    }
+
+    .price-card {
+        padding: 20px;
+    }
+}

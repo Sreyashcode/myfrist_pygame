@@ -1,0 +1,79 @@
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    front-weight: bold;
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+body {
+    background-color: rgb(52, 204, 250)
+}
+.standalone-content-box {
+    border-color: rgb(255, 255, 255)
+}
+You want HTML code for a search bar. A search bar typically consists of an <input type="text"> for the user to type their query and a <button> to submit the search. These elements are usually wrapped in a <form> element, which is essential for handling the submission of the search query.
+
+Here's the HTML code for a basic search bar, along with some basic CSS to make it look decent:
+
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .search-container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            width: 300px; /* Adjust width as needed */
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none; /* Remove default focus outline */
+            transition: border-color 0.3s ease;
+        }
+
+        .search-container input[type="text"]:focus {
+            border-color: #007bff; /* Highlight border on focus */
+        }
+
+        .search-container button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-container button:hover {
+            background-color:rgb(49, 162, 255);
+        }
+        

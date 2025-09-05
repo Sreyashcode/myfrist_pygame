@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="notes.md">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musafir.in</title>
+</head>
+<body>
+    <header class="main-header"></header>
+<div class="logo">
+<a href="index.html">musafir.in</a>
+</div>
+<nav class="main-nav">
+                <ul>
+                    <li><a href="#hotels"><i class="fas fa-hotel"></i> Hotels</a></li>
+                    <li><a href="#flights"><i class="fas fa-plane"></i> Flights</a></li>
+                    <li><a href="#"><i class="fas fa-bus"></i> Buses</a></li>
+                    <li><a href="#"><i class="fas fa-train"></i> Trains</a></li>
+                    <li><a href="#"><i class="fas fa-umbrella-beach"></i> Holidays</a></li>
+                    <li><a href="#"><i class="fas fa-sign-in-alt"></i> Login/Register</a></li>
+                </ul>
+            </nav>
+<main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Find Your Next Adventure with Musafir.in</h1>
+                <p>Book Hotels & Flights at the best prices.</p>
+
+                <div class="tab-selector">
+                    <button class="tab-button active" onclick="showTab('hotel-tab')">Hotels</button>
+                    <button class="tab-button" onclick="showTab('flight-tab')">Flights</button>
+                </div>
+
+                <div id="hotel-tab" class="search-form-container active-tab">
+                    <h2>Book Your Ideal Hotel</h2>
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label for="hotel-destination">Destination</label>
+                            <input type="text" id="hotel-destination" placeholder="e.g., New Delhi, Paris" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-in">Check-in Date</label>
+                            <input type="date" id="check-in" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Check-out Date</label>
+                            <input type="date" id="check-out" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Guests</label>
+                            <input type="number" id="guests" value="1" min="1" required>
+                        </div>
+                        <button type="submit" class="search-button"><i class="fas fa-search"></i> Search Hotels</button>
+                    </form>
+                </div>
+  <div id="flight-tab" class="search-form-container">
+                    <h2>Find Your Perfect Flight</h2>
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label for="flight-origin">Origin</label>
+                            <input type="text" id="flight-origin" placeholder="e.g., Mumbai" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="flight-destination">Destination</label>
+                            <input type="text" id="flight-destination" placeholder="e.g., London" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="departure-date">Departure Date</label>
+                            <input type="date" id="departure-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="return-date">Return Date (Optional)</label>
+                            <input type="date" id="return-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="passengers">Passengers</label>
+                            <input type="number" id="passengers" value="1" min="1" required>
+                        </div>
+                        <button type="submit" class="search-button"><i class="fas fa-search"></i> Search Flights</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="hotels" class="content-section featured-hotels">
+            <div class="container">
+                <h2>Featured Hotels</h2>
+                <div class="hotel-grid">
+                    <div class="hotel-card">
+                        <img src="https://via.placeholder.com/300x200?text=Hotel+Image+1" alt="Hotel Name">
+                        <h3>Grand Hyatt Delhi</h3>
+                        <p>New Delhi, India</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (4.5/5)
+                        </div>
+                        <div class="price">From ₹7,500/night</div>
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                    <div class="hotel-card">
+                        <img src="https://via.placeholder.com/300x200?text=Hotel+Image+2" alt="Hotel Name">
+                        <h3>The Oberoi Mumbai</h3>
+                        <p>Mumbai, India</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5/5)
+                        </div>
+                        <div class="price">From ₹12,000/night</div>
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+ <div class="hotel-card">
+                        <img src="https://via.placeholder.com/300x200?text=Hotel+Image+3" alt="Hotel Name">
+                        <h3>Leela Palace Udaipur</h3>
+                        <p>Udaipur, India</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5/5)
+                        </div>
+                        <div class="price">From ₹15,000/night</div>
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="flights" class="content-section featured-flights">
+            <div class="container">
+                <h2>Popular Flight Routes</h2>
+                <div class="flight-grid">
+                    <div class="flight-card">
+                        <h3>Delhi to Mumbai</h3>
+                        <p>Starting from ₹3,500</p>
+                        <button class="btn btn-secondary">Search Flights</button>
+                    </div>
+                    <div class="flight-card">
+                        <h3>Bengaluru to Chennai</h3>
+                        <p>Starting from ₹2,800</p>
+                        <button class="btn btn-secondary">Search Flights</button>
+                    </div>
+                    <div class="flight-card">
+                        <h3>Hyderabad to Goa</h3>
+                        <p>Starting from ₹4,200</p>
+                        <button class="btn btn-secondary">Search Flights</button>
+                    </div>
+                </div>
+            </div>
+</section>
+</main>
+<footer class="main-footer"></footer>
+<div class="container">
+<div class="footer-links">
+<div class="footer-column">
+ <h4>About Musafir.in</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+ </div>
+                <div class="footer-column">
+                    <h4>Customer Support</h4>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Musafir.in. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</div>
+</div>
+  <script>
+        // Basic JavaScript for tab switching
+        function showTab(tabId) {
+            // Hide all tab containers
+            document.querySelectorAll('.search-form-container').forEach(container => {
+                container.classList.remove('active-tab');
+            });
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show the selected tab container
+            document.getElementById(tabId).classList.add('active-tab');
+            // Activate the corresponding tab button
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+
+</body>
+</html>
