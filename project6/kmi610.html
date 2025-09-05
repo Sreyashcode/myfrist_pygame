@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kmi610 - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>kmi610</h2>
+
+            <form id="loginForm">
+                <h3>Sign In / Log In</h3>
+                <div class="input-group">
+                    <label for="loginEmailPhone">Email / Phone Number</label>
+                    <input type="text" id="loginEmailPhone" name="emailPhone" required>
+                </div>
+                <div class="input-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit" class="btn">Log In</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+
+            <div class="create-account-section">
+                <p>Don't have an account?</p>
+                <button id="showRegisterFormBtn" class="btn secondary-btn">Create New Account</button>
+            </div>
+
+            <form id="registerForm" class="hidden">
+                <h3>Create New Account</h3>
+                <div class="input-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="registerPhone">Phone Number (Optional)</label>
+                    <input type="tel" id="registerPhone" name="phone">
+                </div>
+                <div class="input-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p class="back-to-login">Already have an account? <a href="#" id="showLoginFormLink">Log In</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="kmi610.js"></script>
+</body>
+</html>
